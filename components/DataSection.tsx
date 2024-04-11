@@ -46,7 +46,7 @@ const DataSection = () => {
         {
             id: 6,
             title: 'User signups',
-            imgSrc: chart1,
+            imgSrc: Chart,
             description: 'Customize line style, axis scale, trend lines, showing values on graph, and more.',
             name:'Line chart.',
         },

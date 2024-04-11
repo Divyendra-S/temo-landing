@@ -1,7 +1,7 @@
 import React from 'react'
 import DataCards from './DataCards'
 import Chart from '../public/Chart.png'
-import Chart1 from '../public/Chart1.png'
+import chart1 from '../public/chart1.png'
 import Chart2 from '../public/Chart2.png'
 import Chart3 from '../public/Chart3.png'
 import Image from 'next/image'
@@ -46,7 +46,7 @@ const DataSection = () => {
         {
             id: 6,
             title: 'User signups',
-            imgSrc: Chart1,
+            imgSrc: chart1,
             description: 'Customize line style, axis scale, trend lines, showing values on graph, and more.',
             name:'Line chart.',
         },

@@ -3,7 +3,7 @@ import LightTheme from './LightTheme'
 import DarkTheme from './DarkTheme'
 
 const Theme = () => {
-  const [theme,setTheme] = useState("light")
+  const [theme,setTheme] = useState("Dark")
   return (
     <div>
       {theme === "light" ? <LightTheme setTheme={setTheme}/> : <DarkTheme setTheme={setTheme}/>}

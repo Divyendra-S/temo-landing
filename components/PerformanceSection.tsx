@@ -6,7 +6,7 @@ import Analyze from '../public/Analyze.png'
 const PerformanceSection = () => {
   return (
     <div className=' flex flex-col items-center '>
-        <div className=' w-[486px] h-[140px] mb-[64px] text-center'>
+        <div className=' w-[486px] h-[140px] mb-[34px] text-center'>
             <h2 className=' text-[48px] leading-[52px] text-heading-black ' >Streamlined for you</h2>
             <p className=' text-[16px] leading-[24px] mt-[8px] text-text-black '>Delightfully crafeted to help you stay in folew and focus on what <br/> you care about - leveraging your data.</p>
         </div>

@@ -1,10 +1,12 @@
 import React from 'react'
 import PerformanceSection from './PerformanceSection'
+import MovingCarousel from './MovingCarousel'
 
 const EndSection = () => {
   return (
     <div className=' w-[1156px] h-[2112px] py-[136px]  ' >
         <PerformanceSection/>
+        <MovingCarousel/>
     </div>
   )
 }

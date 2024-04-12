@@ -15,7 +15,8 @@ const config: Config = {
       'light-gray': '#fbfaf9',
       'border-color': '#70451a12',
       'background-color': "#FBFAF9",
-      'orange': '#e16741'
+      'orange': '#e16741',
+      'black-background': '#201e1d',
     },
     extend: {
       backgroundImage: {

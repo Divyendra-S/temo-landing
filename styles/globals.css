@@ -57,3 +57,12 @@
   z-index: 1;
   position: relative;
 }
+
+
+.badge {
+  background: hsl(20, 7%, 20%);
+  box-shadow: 0 1px 2px rgba(12, 9, 8, 0.32), 
+              0 3px 3px rgba(12, 9, 8, 0.1), 
+              0 1px #d6cfc21f inset;
+  color: #fbfaf9;
+}

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "../components/navbar";
-import HeroSection from "@/components/herosection";
+import HeroSection from "../components/herosection";
 import QuerySection from "../components/QuerySection";
-import DataSection from "@/components/DataSection";
-import FeatureSection from "@/components/FeatureSection";
+import DataSection from "../components/DataSection";
+import FeatureSection from "../components/FeatureSection";
+import EndSection from "../components/EndSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function Home() {
       <QuerySection/>
       <DataSection/>
       <FeatureSection/>
+      <EndSection/>
       
     </main>
   );

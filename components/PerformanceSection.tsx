@@ -15,7 +15,7 @@ const PerformanceSection = () => {
                 <div className=' h-[228px] p-12 mb-4  '>
                     <div className='mb-4 badge flex items-center justify-center py-1 px-2 w-[150px] h-6 rounded-full text-xs '>Performance focus</div>
                     <h3 className=' text-[36px] leading-[40px] text-background-color ' >Built for speed</h3>
-                    <p className=' text-sm mt-3  text-[#aba8a6] '>Stay in flow and get to insights faster with iteractions <br/> taht feel instantaneous thanks to smart syncing.</p>
+                    <p className=' text-sm mt-3  text-light-text '>Stay in flow and get to insights faster with iteractions <br/> taht feel instantaneous thanks to smart syncing.</p>
                 </div>
                 <Image src={Focus} alt='focus' width={567} height={308} className=' rounded-b-[22px] ' />
             </div>

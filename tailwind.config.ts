@@ -23,6 +23,7 @@ const config: Config = {
       'background-color': "#FBFAF9",
       'orange': '#e16741',
       'black-background': '#201e1d',
+      'light-text': '#aba8a6',
     },
     extend: {
       animation: {

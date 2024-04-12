@@ -61,7 +61,7 @@ const Table = () => {
               key={rowIndex}
               initial={{ opacity: 0 ,y:8 }}
               animate={{ opacity: 1 ,y:0}}
-              transition={{ duration: 0.7, delay: rowIndex * 0.1 }}
+              transition={{ duration: 0.5, delay: rowIndex * 0.1 }}
             >
               {row.map((cell, cellIndex) => (
                 <motion.td
@@ -69,7 +69,7 @@ const Table = () => {
                   initial={{ opacity: 0,y:8 }}
               animate={{ opacity: 1,y:0 }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.2,
                     delay: cellIndex * 0.1,
                   }}
                   style={{

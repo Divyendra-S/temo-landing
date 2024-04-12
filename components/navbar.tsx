@@ -41,11 +41,11 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={`flex justify-between items-center px-6 py-4 h-[56px] bg-white  text-black text-sm  fixed  mr-10 z-[999]  ${
+      className={`flex justify-between items-center px-6    py-4 h-[56px] bg-white  text-black text-sm  fixed  z-[999]  ${
         isScrolled ? 'shadow-effect rounded-2xl' : ''
       }`}
       initial={{ width: '100%', opacity: 0 }}
-      animate={{ width: isScrolled ? '47%' : '68%', opacity: 1 }}
+      animate={{ width: isScrolled ? '787px' : '1180px', opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
       <motion.div
@@ -89,8 +89,8 @@ const Navbar = () => {
       </motion.div>
       <motion.div
         className="flex "
-        initial={{ x: '100%', opacity: 0 }}
-        animate={{ x: isScrolled ? 0 : '100%', opacity: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ x: isScrolled ? 0 : 1, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <button className="bg-transparent text-[#4a4340] px-4 py-2 rounded-lg hover:bg-blue-100">

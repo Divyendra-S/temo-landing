@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Table from "./Table";
 import Background from "../public/background.png";
 import Image from "next/image";
 import QueryEditor from "./QueryEditor";
+import Visual from "../public/Visual.png";
 
 const QuerySection = () => {
+  const [QueryId, setQueryId] = useState(1);
   return (
     <div>
       <div className="bg-[#FBFAF9]  w-[1188px] rounded-[35px] pt-[136px] pb-[72px] flex flex-col  text-center items-center ">
@@ -17,9 +19,12 @@ const QuerySection = () => {
             editor.
             <br /> Give everyone in your team the superpowers they need.
           </p>
-          <div className=" my-[24px] mx-auto text-center h-8 w-[216px] ">
+          <div
+            
+            className=" my-[24px] mx-auto text-center h-8 w-[216px] "
+          >
             <div className="flex rounded-full  justify-between bg-white shadow-effect-tabs">
-              <div className=" text-[14px] leading-[20px] border-r px-4 py-2 w-1/2 flex gap-2 justify-center">
+              <div onClick={() => setQueryId(1)} className=" text-[14px] leading-[20px] border-r px-4 py-2 w-1/2 flex gap-2 justify-center cursor-default">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -36,7 +41,10 @@ const QuerySection = () => {
                 SQL
               </div>
 
-              <div className=" text-[14px] leading-[20px] px-4 py-2 w-1/2 flex gap-2">
+              <div
+                onClick={() => setQueryId(2)}
+                className=" text-[14px] leading-[20px] px-4 py-2 w-1/2 flex gap-2 cursor-default "
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 21 20"
@@ -55,31 +63,40 @@ const QuerySection = () => {
             </div>
           </div>
         </div>
-        <Table />
-        <div className="bg-[#37322f] gap-1 rounded-[10px] mt-[18px] mb-4 flex text-[#fbfaf9] py-2 pl-3 font-[500] pr-4 shadow-effect-editor-button text-[14px] leading-5 ">
-          <svg
-            fill="none"
-            height="20"
-            viewBox="0 0 20 20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11.1667 16.6684C11.1667 16.8525 11.0174 17.0018 10.8333 17.0018C10.6492 17.0018 10.5 16.8525 10.5 16.6684C10.5 16.4844 10.6492 16.3351 10.8333 16.3351C11.0174 16.3351 11.1667 16.4844 11.1667 16.6684ZM15.1891 5.65808L14.9391 5.22507L15.1891 5.65808C15.3485 5.56603 15.5524 5.62066 15.6445 5.78009C15.7365 5.93952 15.6819 6.14338 15.5225 6.23543C15.363 6.32748 15.1592 6.27285 15.0671 6.11342L14.6467 6.35612L15.0671 6.11342C14.9751 5.95399 15.0297 5.75013 15.1891 5.65808ZM16.6667 8.83511C16.8508 8.83511 17 8.98435 17 9.16845C17 9.35254 16.8508 9.50178 16.6667 9.50178C16.4826 9.50178 16.3333 9.35254 16.3333 9.16845C16.3333 8.98435 16.4826 8.83511 16.6667 8.83511ZM16.3579 12.3248C16.5173 12.4168 16.5719 12.6207 16.4799 12.7801C16.3878 12.9395 16.184 12.9942 16.0246 12.9021C15.8651 12.8101 15.8105 12.6062 15.9025 12.4468C15.9946 12.2873 16.1985 12.2327 16.3579 12.3248ZM14.345 15.1919C14.4371 15.3514 14.3824 15.5552 14.223 15.6473C14.0636 15.7393 13.8597 15.6847 13.7677 15.5253C13.6756 15.3658 13.7302 15.162 13.8897 15.0699L13.6397 14.6369L13.8897 15.0699C14.0491 14.9779 14.253 15.0325 14.345 15.1919Z"
-              fill="currentColor"
-              stroke="currentColor"
-            ></path>
-            <path
-              d="M7.70833 12.2917V16.875H3.125M7.5 16.4063C4.93915 15.4062 3.125 12.915 3.125 10C3.125 6.20304 6.20304 3.125 10 3.125C10.9614 3.125 11.8768 3.32235 12.7077 3.67876"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-            ></path>
-          </svg>
-          Load Query
-        </div>
-        <QueryEditor />
+        {QueryId === 1 ? (
+          <div className="flex flex-col items-center">
+            {" "}
+            <Table />
+            <div className="bg-[#37322f] gap-1 rounded-[10px] mt-[18px] mb-4 flex text-[#fbfaf9] py-2 pl-3 font-[500] pr-4 shadow-effect-editor-button text-[14px] leading-5 ">
+              <svg
+                fill="none"
+                height="20"
+                viewBox="0 0 20 20"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.1667 16.6684C11.1667 16.8525 11.0174 17.0018 10.8333 17.0018C10.6492 17.0018 10.5 16.8525 10.5 16.6684C10.5 16.4844 10.6492 16.3351 10.8333 16.3351C11.0174 16.3351 11.1667 16.4844 11.1667 16.6684ZM15.1891 5.65808L14.9391 5.22507L15.1891 5.65808C15.3485 5.56603 15.5524 5.62066 15.6445 5.78009C15.7365 5.93952 15.6819 6.14338 15.5225 6.23543C15.363 6.32748 15.1592 6.27285 15.0671 6.11342L14.6467 6.35612L15.0671 6.11342C14.9751 5.95399 15.0297 5.75013 15.1891 5.65808ZM16.6667 8.83511C16.8508 8.83511 17 8.98435 17 9.16845C17 9.35254 16.8508 9.50178 16.6667 9.50178C16.4826 9.50178 16.3333 9.35254 16.3333 9.16845C16.3333 8.98435 16.4826 8.83511 16.6667 8.83511ZM16.3579 12.3248C16.5173 12.4168 16.5719 12.6207 16.4799 12.7801C16.3878 12.9395 16.184 12.9942 16.0246 12.9021C15.8651 12.8101 15.8105 12.6062 15.9025 12.4468C15.9946 12.2873 16.1985 12.2327 16.3579 12.3248ZM14.345 15.1919C14.4371 15.3514 14.3824 15.5552 14.223 15.6473C14.0636 15.7393 13.8597 15.6847 13.7677 15.5253C13.6756 15.3658 13.7302 15.162 13.8897 15.0699L13.6397 14.6369L13.8897 15.0699C14.0491 14.9779 14.253 15.0325 14.345 15.1919Z"
+                  fill="currentColor"
+                  stroke="currentColor"
+                ></path>
+                <path
+                  d="M7.70833 12.2917V16.875H3.125M7.5 16.4063C4.93915 15.4062 3.125 12.915 3.125 10C3.125 6.20304 6.20304 3.125 10 3.125C10.9614 3.125 11.8768 3.32235 12.7077 3.67876"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                ></path>
+              </svg>
+              Load Query
+            </div>
+            <QueryEditor />
+          </div>
+        ) : (
+          <div>
+            <Image src={Visual} alt="visual" width={816} height={650} />
+          </div>
+        )}
       </div>
     </div>
   );

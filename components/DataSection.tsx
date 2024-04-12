@@ -1,7 +1,7 @@
 import React from 'react'
-import DataCards from './DataCards'
+
 import Chart from '../public/Chart.png'
-import chart1 from '../public/chart1.png'
+
 import Chart2 from '../public/Chart2.png'
 import Chart3 from '../public/Chart3.png'
 import Image from 'next/image'

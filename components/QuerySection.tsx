@@ -4,6 +4,7 @@ import Background from "../public/background.png";
 import Image from "next/image";
 import QueryEditor from "./QueryEditor";
 import Visual from "../public/Visual.png";
+import { cn } from "@/lib/utils/cn";
 
 const QuerySection = () => {
   const [QueryId, setQueryId] = useState(1);
@@ -24,7 +25,9 @@ const QuerySection = () => {
             className=" my-[24px] mx-auto text-center h-8 w-[216px] "
           >
             <div className="flex rounded-full  justify-between bg-white shadow-effect-tabs">
-              <div onClick={() => setQueryId(1)} className=" text-[14px] leading-[20px] border-r px-4 py-2 w-1/2 flex gap-2 justify-center cursor-default">
+              <div onClick={() => setQueryId(1)} className={cn(" rounded-l-full  bg-white text-[14px] leading-[20px] border-r border-light-gray px-4 py-2 w-1/2 flex gap-2 justify-center cursor-default",
+                {"scale-105 transition duration-100 shadow-effect-tabs" : QueryId==1,}
+              )}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -43,7 +46,9 @@ const QuerySection = () => {
 
               <div
                 onClick={() => setQueryId(2)}
-                className=" text-[14px] leading-[20px] px-4 py-2 w-1/2 flex gap-2 cursor-default "
+                className={cn(" rounded-r-full  bg-white text-[14px] leading-[20px]  px-4 py-2 w-1/2 flex gap-2 justify-center cursor-default",
+                {"scale-105 transition duration-100 shadow-effect-tabs" : QueryId==2,}
+              )}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

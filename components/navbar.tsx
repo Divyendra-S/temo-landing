@@ -90,7 +90,7 @@ const Navbar = () => {
           <a
             key={option}
             href="#"
-            className="text-[#605a57] hover:text-gray-800"
+            className="text-light-black hover:text-gray-800"
           >
             {option}
           </a>
@@ -102,12 +102,12 @@ const Navbar = () => {
         animate={{ x: isScrolled ? 0 : 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }} // Apply the easing function here
       >
-        <button className="bg-transparent text-[#4a4340] px-4 py-2 rounded-lg hover:bg-blue-100">
+        <button className="bg-transparent text-text-black px-4 py-2 rounded-lg hover:bg-blue-100">
           Log In
         </button>
         {isScrolled && (
           <motion.button
-            className=" shadow-effect-button text-[#4a4340] h-8 px-2 rounded-lg mt-[2px] "
+            className=" shadow-effect-button text-text-black h-8 px-2 rounded-lg mt-[2px] "
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{

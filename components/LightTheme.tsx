@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Light from '../public/Light.png'
+import Light from "../public/Light.png";
 import Image from "next/image";
 
 const LightTheme = ({ setTheme }: any) => {
@@ -17,9 +17,21 @@ const LightTheme = ({ setTheme }: any) => {
         delightful <br />
         to explore and analyze your data.
       </p>
-      <div onClick={handleToggle} className="bg-[#37322f]  rounded-[10px] mt-[26px] mb-4 flex text-[#fbfaf9] py-2 pl-4 font-[500] pr-4 shadow-effect-editor-button text-[14px] leading-5 cursor-default "> Dark Theme </div>
-      <Image src={Light} alt="light" width={1030} height={314} className="  translate-y-[26px] " />
+      <div
+        onClick={handleToggle}
+        className="bg-[#37322f]  rounded-[10px] mt-[26px] mb-4 flex text-[#fbfaf9] py-2 pl-4 font-[500] pr-4 shadow-effect-editor-button text-[14px] leading-5 cursor-default "
+      >
+        {" "}
+        Dark Theme{" "}
       </div>
+      <Image
+        src={Light}
+        alt="light"
+        width={1030}
+        height={314}
+        className="  translate-y-[26px] "
+      />
+    </div>
   );
 };
 

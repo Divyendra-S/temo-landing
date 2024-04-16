@@ -26,19 +26,15 @@
 
 .shadow-effect-editor-button {
   box-shadow: 0 1px 1px rgba(45, 32, 17, 0.12),
-              0 1.50259px 3px rgba(45, 32, 17, 0.2),
-              0 4px 8px rgba(45, 32, 17, 0.2),
-              0 12px 24px -6px rgba(45, 32, 17, 0.3),
-              0 -2px #000000bf inset;
+    0 1.50259px 3px rgba(45, 32, 17, 0.2), 0 4px 8px rgba(45, 32, 17, 0.2),
+    0 12px 24px -6px rgba(45, 32, 17, 0.3), 0 -2px #000000bf inset;
 }
 
 .shadow-effect-card {
   box-shadow: 0 1px 2px rgba(95, 74, 46, 0.075),
-              0 4px 6px rgba(95, 74, 46, 0.043),
-              0 24px 40px -16px rgba(104, 75, 37, 0.075);
+    0 4px 6px rgba(95, 74, 46, 0.043),
+    0 24px 40px -16px rgba(104, 75, 37, 0.075);
 }
-
-
 
 .section-header-center {
   text-align: center;
@@ -58,18 +54,14 @@
   position: relative;
 }
 
-
 .badge {
   background: hsl(20, 7%, 20%);
-  box-shadow: 0 1px 2px rgba(12, 9, 8, 0.32), 
-              0 3px 3px rgba(12, 9, 8, 0.1), 
-              0 1px #d6cfc21f inset;
+  box-shadow: 0 1px 2px rgba(12, 9, 8, 0.32), 0 3px 3px rgba(12, 9, 8, 0.1),
+    0 1px #d6cfc21f inset;
   color: #fbfaf9;
 }
 
 .corousel-shadow {
-  box-shadow: 0 0 0 1px #ebe7e0,
-                0 1px 2px #d1cdc752,
-                0 3px 4px #d1cdc73d,
-                0 -3px #f0f0efcc inset;
+  box-shadow: 0 0 0 1px #ebe7e0, 0 1px 2px #d1cdc752, 0 3px 4px #d1cdc73d,
+    0 -3px #f0f0efcc inset;
 }

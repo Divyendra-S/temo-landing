@@ -5,8 +5,8 @@ import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
   items,
-  direction = 'left' ,
-  speed = 'slow',
+  direction = "left",
+  speed = "slow",
   pauseOnHover = true,
   className,
 }: {
@@ -88,19 +88,13 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className=" py-2 pl-[14px] pr-[18px] mr-4 corousel-shadow rounded-full flex items-center justify-center  bg-white "
-            style={{
-              
-            }}
+            style={{}}
             key={item.name}
           >
-            <blockquote className="  " >
-              
+            <blockquote className="  ">
               <div className="relative z-20 ">
                 <span className="flex  gap-1 justify-center items-center">
-                  <span className=" text-sm  text-gray-400 font-normal">
-                  
-
-                  </span>
+                  <span className=" text-sm  text-gray-400 font-normal"></span>
                   <span className=" text-sm  text-text-black font-normal">
                     {item.name}
                   </span>

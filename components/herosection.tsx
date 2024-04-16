@@ -1,46 +1,44 @@
 import React from "react";
 import Image from "next/image";
-import HalfHeroSection from "../public/HalfHeroSection.png";
-import HeroSection1 from "../public/HeroSection1.png";
+import bannerBackground from "../public/bannerBackground.png";
+import banner from "../public/banner.png";
 
 const HeroSection = () => {
   return (
-    <div className="">
-      <div className="text-black mt-[70px] flex relative justify-center text-center mr-2 ">
+    <section>
+      <div className="text-black mt-[70px] flex relative justify-center text-center mr-2">
         <Image
-          src={HalfHeroSection}
-          alt="HeroSection"
-          width={1217}
-          height={300}
+          src={bannerBackground}
+          alt="background"
+          layout="fill"
+          objectFit="cover"
+          priority
         />
-        <div className="absolute text-center mt-[85px] text-[64px] leading-[68px] text-heading-black flex flex-col items-center ">
-          <div>
+        <div className="absolute text-center flex flex-col items-center py-10">
+          <h1 className="hero-heading">
             Your Workflow
-            <span className=" text-orange">
-              Automation and Documentation
-            </span>{" "}
-            <br /> Sidekick{" "}
-          </div>
-          <p className="  text-light-black mt-3 text-[16px] leading-[24px] ">
-            Record browser sessions, generate step-by-step guides, and <br />{" "}
+            <span className="text-orange"> Automation and Documentation</span>
+            <br /> Sidekick
+          </h1>
+          <p className="hero-subtext text-light-black mt-3">
+            Record browser sessions, generate step-by-step guides, and
             streamline your documentation with AI-powered efficiency.
           </p>
-          <div className="bg-heading-black  rounded-[10px] mt-[18px] mb-4 flex text-background-color py-2 pl-3 font-[500] pr-4 shadow-effect-editor-button text-[14px] leading-5 ">
-            {" "}
+          <button className="bg-heading-black rounded-[10px] my-4 flex items-center justify-center text-background-color py-2 px-4 font-medium shadow-effect-editor-button text-[14px] leading-5">
             Download
-          </div>
+          </button>
         </div>
       </div>
-      <div className="ml-2">
+      <div className="box-shadow-2  mt-[400px] p-4">
         <Image
-          src={HeroSection1}
-          alt="HeroSection"
+          src={banner}
+          alt="Hero Section"
           width={1217}
-          height={300}
-          className=""
+          height={350}
+          className="box-shadow-4"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

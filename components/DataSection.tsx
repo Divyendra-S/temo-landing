@@ -10,65 +10,60 @@ const DataSection = () => {
   const dataSection = [
     {
       id: 1,
-      title: "User signups",
+      title: "Seamless Session Recording",
       imgSrc: Chart,
       description:
-        "Customize line style, axis scale, trend lines, showing values on graph, and more.",
-      name: "Line chart.",
+        "Capture every click, scroll, and interaction with high-fidelity",
+      name: "Session Recording.",
     },
     {
       id: 2,
-      title: "User signups",
+      title: "Intelligent Chapter Generation",
       imgSrc: Chart2,
       description:
-        "Customize line style, axis scale, trend lines, showing values on graph, and more.",
-      name: "Line chart.",
+        "Automatically generate well-defined chapters by analyzing recordings for logical breaks and transitions.",
+      name: "Chapter Generation.",
     },
     {
       id: 3,
-      title: "User signups",
+      title: "Interactive Demo Creation",
       imgSrc: Chart3,
       description:
-        "Customize line style, axis scale, trend lines, showing values on graph, and more.",
-      name: "Line chart.",
+        "Transform sessions into engaging, step-by-step walkthroughs with intuitive controls and visual cues.",
+      name: "Demo Creation.",
     },
     {
       id: 4,
-      title: "User signups",
+      title: "Automatic Article Generation",
       imgSrc: Chart,
       description:
-        "Customize line style, axis scale, trend lines, showing values on graph, and more.",
-      name: "Line chart.",
+        "Generate informative articles from recordings using LLMs to save documentation effort.",
+      name: "Article Generation.",
     },
     {
       id: 5,
-      title: "User signups",
+      title: "Voice-Over and Voice Cloning",
       imgSrc: Chart2,
       description:
-        "Customize line style, axis scale, trend lines, showing values on graph, and more.",
-      name: "Line chart.",
+        "Add voice-overs or explore voice cloning for a consistent and polished guide narration.",
+      name: "Voice Features.",
     },
     {
       id: 6,
-      title: "User signups",
-      imgSrc: Chart,
+      title: "Effortless Translation",
+      imgSrc: Chart3,
       description:
-        "Customize line style, axis scale, trend lines, showing values on graph, and more.",
-      name: "Line chart.",
+        "Reach a global audience by seamlessly translating guides and articles into multiple languages.",
+      name: "Effortless Translation.",
     },
   ];
   return (
     <section className=" py-[136px] w-[1168px] flex flex-col items-center ">
       <div className="mb-[54px]  sm:h-[192px]  text-center ">
         <h2 className=" text-heading-black text-[48px] leading-[52px] text-center ">
-          Visualize data <br /> with powerful charts
+          Document Workflows Like Never Before
         </h2>
-        <p className=" text-text-black text-[16px] leading-6 mt-2 text-center  ">
-          Visulaize your data in a variety of ways thanks to a roubust set of
-          visualizations. <br />
-          Whether it's as a table. a chart, or a single value -- you're in
-          control.
-        </p>
+        <p className=" text-text-black text-[16px] leading-6 mt-2 text-center  "></p>
       </div>
       <div className=" flex flex-wrap gap-5 sm:w-[1168px] justify-center ">
         {dataSection.map((item) => (

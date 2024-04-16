@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [companyName, setCompanyName] = useState("Index");
+  const [companyName, setCompanyName] = useState("Temo.AI");
   const [options, setOptions] = useState([
     "Features",
-    "Pricing",
-    "Blog",
+    // "Pricing",
+    // "Blog",
     "Changelog",
-    "Careers",
-    "Support",
+    // "Careers",
+    // "Support",
   ]);
 
   useEffect(() => {
@@ -34,9 +34,9 @@ const Navbar = () => {
         setCompanyName((prevName) => prevName.slice(0, -1));
       } else {
         setCompanyName((prevName) =>
-          prevName.length === "Index".length
+          prevName.length === "Temo.AI".length
             ? prevName
-            : "Index".slice(0, prevName.length + 1)
+            : "Temo.AI".slice(0, prevName.length + 1)
         );
       }
       timer = setTimeout(animateCompanyName, 35);
@@ -61,7 +61,7 @@ const Navbar = () => {
         transition={{ duration: 0.5, ease: "easeOut" }} // Apply the easing function here
       >
         {/* <img src="/logo.png" alt="Logo" className="h-8 mr-2" /> */}
-        <div>logo</div>
+        <div>Temo.AI</div>
         {isScrolled && <div className="h-5 w-px ml-3 bg-gray-300"></div>}
         <motion.span className="text-lg font-bold">
           {companyName.split("").map((letter, index) => (
@@ -103,11 +103,11 @@ const Navbar = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }} // Apply the easing function here
       >
         <button className="bg-transparent text-text-black px-4 py-2 rounded-lg hover:bg-blue-100">
-          Log In
+          Github
         </button>
         {isScrolled && (
           <motion.button
-            className=" shadow-effect-button text-text-black h-8 px-2 rounded-lg mt-[2px] "
+            className="shadow-effect-button text-text-black h-8 px-2 rounded-lg mt-[2px] "
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{
@@ -117,7 +117,7 @@ const Navbar = () => {
             }} // Apply the easing function here
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            Sign Up
+            Github
           </motion.button>
         )}
       </motion.div>

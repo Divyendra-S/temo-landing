@@ -15,16 +15,19 @@ const HeroSection = () => {
         />
         <div className="absolute text-center mt-[85px] text-[64px] leading-[68px] text-heading-black flex flex-col items-center ">
           <div>
-            Data to <span className=" text-orange">insights</span> <br /> in
-            minutes{" "}
+            Your Workflow
+            <span className=" text-orange">
+              Automation and Documentation
+            </span>{" "}
+            <br /> Sidekick{" "}
           </div>
           <p className="  text-light-black mt-3 text-[16px] leading-[24px] ">
-            Explore your data, build you dashboard, <br /> bring your team
-            together.
+            Record browser sessions, generate step-by-step guides, and <br />{" "}
+            streamline your documentation with AI-powered efficiency.
           </p>
           <div className="bg-heading-black  rounded-[10px] mt-[18px] mb-4 flex text-background-color py-2 pl-3 font-[500] pr-4 shadow-effect-editor-button text-[14px] leading-5 ">
             {" "}
-            Request Access{" "}
+            Download
           </div>
         </div>
       </div>

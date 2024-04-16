@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
- 
+
 const colors = require("tailwindcss/colors");
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -14,16 +15,16 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      'white': '#fffffff2',
-      'heading-black': '#37322f',
-      'text-black': '#4a4340',
-      'light-black': '#605a57', 
-      'light-gray': '#fbfaf9',
-      'border-color': '#70451a12',
-      'background-color': "#FBFAF9",
-      'orange': '#e16741',
-      'black-background': '#201e1d',
-      'light-text': '#aba8a6',
+      white: "#ffffff",
+      "heading-black": "#37322f",
+      "text-black": "#4a4340",
+      "light-black": "#605a57",
+      "light-gray": "#fbfaf9",
+      "border-color": "#70451a12",
+      "background-color": "#FBFAF9",
+      orange: "#e16741",
+      "black-background": "#201e1d",
+      "light-text": "#aba8a6",
     },
     extend: {
       animation: {
@@ -52,11 +53,10 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
 }
-
 
 export default config;

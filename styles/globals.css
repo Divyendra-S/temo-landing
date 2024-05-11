@@ -1,81 +1,61 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-.shadow-effect {
-  box-shadow: 0 0 2px rgba(95, 74, 46, 0.075), 0 2px 3px rgba(95, 74, 46, 0.043),
-    0 4px 6px rgba(95, 74, 46, 0.043), 0 20px 32px -12px rgba(95, 74, 46, 0.122);
-}
+  
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
 
-.shadow-effect-button {
-  box-shadow: 0 1px 2px rgba(209, 205, 200, 0.5),
-    0 3px 3px rgba(209, 205, 200, 0.3), 0 -2px #f0f0ef inset, 0 0 0 1px #f0f0ef;
-}
-
-.shadow-effect-tabs {
-  box-shadow: 0 0 0 1px rgba(227, 225, 222, 0.6),
-    0 1px 2px rgba(95, 74, 46, 0.08), 0 4px 6px rgba(95, 74, 46, 0.08),
-    0 12px 16px rgba(104, 75, 37, 0.06);
-}
-
-.shadow-effect-editor {
-  box-shadow: 0 0 0 1px rgba(227, 225, 222, 0.4),
-    0 1px 2px rgba(95, 74, 46, 0.075), 0 4px 6px rgba(95, 74, 46, 0.043),
-    0 40px 40px -24px rgba(104, 75, 37, 0.075);
-}
-
-.shadow-effect-editor-button {
-  box-shadow: 0 1px 1px rgba(45, 32, 17, 0.12),
-    0 1.50259px 3px rgba(45, 32, 17, 0.2), 0 4px 8px rgba(45, 32, 17, 0.2),
-    0 12px 24px -6px rgba(45, 32, 17, 0.3), 0 -2px #000000bf inset;
-}
-
-.shadow-effect-card {
-  box-shadow: 0 1px 2px rgba(95, 74, 46, 0.075),
-    0 4px 6px rgba(95, 74, 46, 0.043),
-    0 24px 40px -16px rgba(104, 75, 37, 0.075);
-}
-
-.section-header-center {
-  text-align: center;
-}
-
-.section-header,
-.section-header-title,
-.section-header-description {
-  max-width: -moz-max-content;
-  max-width: max-content;
-  width: 100%;
-}
-
-.section-header {
-  @apply flex flex-col;
-  z-index: 1;
-  position: relative;
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
 }
 
-.badge {
-  background: hsl(20, 7%, 20%);
-  box-shadow: 0 1px 2px rgba(12, 9, 8, 0.32), 0 3px 3px rgba(12, 9, 8, 0.1),
-    0 1px #d6cfc21f inset;
-  color: #fbfaf9;
-}
 
-.corousel-shadow {
-  box-shadow: 0 0 0 1px #ebe7e0, 0 1px 2px #d1cdc752, 0 3px 4px #d1cdc73d,
-    0 -3px #f0f0efcc inset;
-}
-.hero-heading {
-  font-size: 64px; /* Adjust based on your design requirements */
-  line-height: 1.2; /* Increase line height */
-  text-align: center;
-  vertical-align: middle;
-  margin: 0 auto; /* Center horizontally */
-}
-
-.hero-subtext {
-  font-size: 18px; /* Adjust based on your design requirements */
-  line-height: 1.4;
-  text-align: center;
-  margin-top: 20px; /* Space between heading and subtext */
-}
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }

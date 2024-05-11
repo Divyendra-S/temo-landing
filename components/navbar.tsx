@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={`flex justify-between items-center px-6 py-4 h-[56px] bg-white text-black text-sm fixed z-[999] ${
+      className={`flex justify-between items-center px-6 py-4 h-[56px] bg-background text-foreground text-sm fixed z-[999] ${
         isScrolled ? "shadow-effect rounded-2xl" : ""
       }`}
       initial={{ width: "1180px", opacity: 0 }}
@@ -62,7 +62,7 @@ const Navbar = () => {
       >
         {/* <img src="/logo.png" alt="Logo" className="h-8 mr-2" /> */}
         <div>Temo.AI</div>
-        {isScrolled && <div className="h-5 w-px ml-3 bg-gray-300"></div>}
+        {isScrolled && <div className="h-5 w-px ml-3 bg-border"></div>}
         <motion.span className="text-lg font-bold">
           {companyName.split("").map((letter, index) => (
             <motion.span
@@ -90,7 +90,7 @@ const Navbar = () => {
           <a
             key={option}
             href="#"
-            className="text-light-black hover:text-gray-800"
+            className="text-light-black hover:text-foreground"
           >
             {option}
           </a>
@@ -102,12 +102,12 @@ const Navbar = () => {
         animate={{ x: isScrolled ? 0 : 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }} // Apply the easing function here
       >
-        <button className="bg-transparent text-text-black px-4 py-2 rounded-lg hover:bg-blue-100">
+        <button className="bg-transparent text-text-black px-4 py-2 rounded-lg hover:bg-accent">
           Github
         </button>
         {isScrolled && (
           <motion.button
-            className="shadow-effect-button text-text-black h-8 px-2 rounded-lg mt-[2px] "
+            className="shadow-effect-button bg-accent/85 text-text-black h-8 px-2 rounded-lg mt-[2px] "
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{

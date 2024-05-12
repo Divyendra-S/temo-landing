@@ -20,19 +20,19 @@ const ReusableSection: React.FC<SectionProps> = ({
   featureText,
 }) => {
   return (
-    <section className="border border-border rounded-2xl container  dark:bg-accent/30 p-8 md:p-10 md:pb-0 overflow-hidden mb-12 mt-12">
+    <section className="border border-border rounded-2xl   dark:bg-accent/30 p-8 md:p-10 md:pb-0 overflow-hidden mb-12 mt-12">
       <div
         className={`flex flex-col ${
           reverse ? 'md:flex-row-reverse ' : 'md:flex-row md:space-x-[70px] '
         } `}
       >
-        <div className=" w-[2000px] ">
+        <div className=" w-[2000px] border rounded-lg ">
           <Image
             src={imageSrc}
             alt={imageAlt}
             width={794}
             height={402}
-            
+            className='rounded-lg'
             priority
           />
           {/* <Image
@@ -50,10 +50,10 @@ const ReusableSection: React.FC<SectionProps> = ({
             }
         )}>
           <h3 className="font-medium text-xl md:text-2xl mb-4">{title}</h3>
-          <p className="text-[#878787] mb-4">{description}</p>
+          <p className="text-foreground/45 mb-4">{description}</p>
           <div className="flex space-x-2 items-center mt-8">
             <CheckIcon />
-            <span className="text-[#878787]">{featureText}</span>
+            <span className="text-foreground/45">{featureText}</span>
           </div>
         </div>
       </div>

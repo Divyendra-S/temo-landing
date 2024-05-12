@@ -32,7 +32,7 @@ const Dashbooard = () => {
       </div>
       <p className="text-xs text-foreground/45 mt-6">No credit card required.</p>
       </section>
-      <div className='flex items-center justify-center mt-12 md:mt-14 flex-col'>
+      <div className='flex items-center justify-center mt-12 md:mt-14 flex-col rounded-lg border '>
         <Image src={DashboardImage} alt="dashboard" width={1030} height={672} className='rounded-lg' />
       </div>
     </div>

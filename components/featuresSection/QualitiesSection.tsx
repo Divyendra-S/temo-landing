@@ -2,8 +2,16 @@ import React from "react";
 import ReusableSection from "./ReusableSection";
 import DashboardImage from "../../public/DashboardImage.png";
 import Section from "./Section";
+import ComingSoonSection from "./ComingSoonSection";
+import OpenStartup from "./OpenStartUp";
+import BottomSection from "./BottomSection";
 
 const QualitiesSection = () => {
+  const imgSrc = {
+    src: DashboardImage,
+    width: 793,
+    height: 405,
+  };
 
   const features = [
     {
@@ -39,6 +47,16 @@ const QualitiesSection = () => {
         featureText="Share financial reports"
       />
       <Section features={features} />
+      
+      <ComingSoonSection
+        title="Your Virtual CFO"
+        description="With Midday AI, you can ask anything and gain insights into your financial situation. Understand your major expenses and income sources. Inquire about transactions without receipts or explore revenue patterns like Burn rate or MRR. Learning from your financial data helps you save money or increase earnings in the long run."
+        imgSrc={imgSrc}
+        imgAlt="AI"
+        isComingSoon
+      />
+      <OpenStartup />
+      <BottomSection/>
     </section>
   );
 };

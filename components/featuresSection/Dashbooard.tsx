@@ -4,6 +4,7 @@ import { Button } from '../ui/button'
 import { ChevronRight } from 'lucide-react'
 import DashboardImage from '../../public/DashboardImage.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Dashbooard = () => {
   return (
@@ -23,12 +24,12 @@ const Dashbooard = () => {
         instead.
       </p>
       <div className="mt-8 flex items-center space-x-4">
-        <a href="/talk-to-us">
+        <Link href="/talk-to-us">
           <Button variant="outline">Talk to us</Button>
-        </a>
-        <a href="https://app.midday.ai">
+        </Link>
+        <Link href="https://temo.ai">
           <Button>Get Early Access</Button>
-        </a>
+        </Link>
       </div>
       <p className="text-xs text-foreground/45 mt-6">No credit card required.</p>
       </section>

@@ -47,8 +47,8 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={`flex justify-between items-center px-6 py-4 h-[56px] bg-background text-foreground text-sm fixed z-[999] ${
-        isScrolled ? "shadow-effect rounded-2xl" : ""
+      className={`flex justify-between items-center mt-[15px] px-6 py-4 h-[56px] bg-background text-foreground text-sm fixed z-[999] ${
+        isScrolled ? "shadow-effect rounded-2xl border border-border bg-background " : ""
       }`}
       initial={{ width: "1180px", opacity: 0 }}
       animate={{ width: isScrolled ? "787px" : "1180px", opacity: 1 }}

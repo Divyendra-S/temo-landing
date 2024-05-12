@@ -107,7 +107,7 @@ const Navbar = () => {
         </button>
         {isScrolled && (
           <motion.button
-            className="shadow-effect-button bg-accent/85 text-text-black h-8 px-2 rounded-lg mt-[2px] "
+            className=" bg-accent/85 text-text-black h-8 px-2 rounded-lg mt-[2px] "
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{

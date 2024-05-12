@@ -7,7 +7,7 @@ interface FeatureDetailsProps {
   description: string;
   items: string[];
   email: string;
-  imageSrc?: StaticImageData;
+  imageSrc: StaticImageData;
   imageAltLight?: string;
   imageAltDark?: string;
 }

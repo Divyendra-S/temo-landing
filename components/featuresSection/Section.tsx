@@ -2,6 +2,7 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import DashboardImage from "../../public/DashboardImage.png";
 import FeaturesDetails from "./FeaturesDetails";
+
 interface SectionProps {
   features: {
     status: string;
@@ -14,7 +15,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ features }) => {
   return (
-    <section className="flex justify-between space-y-12  md:space-y-0 space-x-8 flex-col md:flex-row overflow-hidden mb-12">
+    <section className="flex flex-col md:flex-row justify-between space-y-12 md:space-y-0 md:space-x-8 overflow-hidden mb-12">
       {features.map(
         ({ status, title, description, imageSrc, imageAlt }, index) => (
           <FeatureCard
@@ -58,21 +59,23 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   imageAlt,
 }) => {
   return (
-    <div className="border border-border basis-1/3 rounded-2xl bg-accent/30 p-10 md:text-center flex flex-col">
+    <div className="border border-border basis-full md:basis-1/3 rounded-2xl bg-accent/30 p-6 md:p-10 flex flex-col items-center md:text-center">
       {status === "coming-soon" && (
-        <span className="text-primary border border-primary rounded-full self-start font-semibold px-3 text-xs py-1.5 mb-4">
+        <span className="text-primary border border-primary rounded-full font-semibold px-3 text-xs py-1.5 mb-4">
           Coming soon
         </span>
       )}
-      <h4 className="font-medium text-xl md:text-2xl mb-4">{title}</h4>
+      <h4 className="font-medium text-lg md:text-xl lg:text-2xl mb-4">
+        {title}
+      </h4>
       <p className="text-foreground/45">{description}</p>
-      <div className="mt-8 md:mt-8">
+      <div className="mt-8">
         <Image
           src={imageSrc}
           alt={imageAlt}
           width={1107}
           height={528}
-          className=""
+          className="w-full h-auto"
           priority
         />
       </div>
@@ -105,18 +108,20 @@ const FeatureDetails: React.FC<FeatureDetailsProps> = ({
     setTimeout(() => setCopied(false), 2000);
   };
   return (
-    <div className="border border-border md:basis-2/3 rounded-2xl bg-accent/30 p-10 flex justify-between md:space-x-8 md:flex-row flex-col">
+    <div className="border border-border basis-full md:basis-2/3 rounded-2xl bg-accent/30 p-6 md:p-10 flex flex-col md:flex-row justify-between md:space-x-8">
       <div className="flex flex-col md:basis-1/2">
-        <h4 className="font-medium text-xl md:text-2xl mb-4">{title}</h4>
+        <h4 className="font-medium text-lg md:text-xl lg:text-2xl mb-4">
+          {title}
+        </h4>
         <p className="text-foreground/45 mb-4">{description}</p>
-        <ul className="list-decimal pl-4 space-y-3">
+        <ul className="list-decimal pl-4 space-y-3 mb-6 md:mb-4">
           {items.map((item, index) => (
             <li key={index} className="text-foreground/45">
               {item}
             </li>
           ))}
         </ul>
-        <div className="flex items-center relative w-full rounded-md border border-border py-2 px-4 max-w-[240px] mt-8">
+        <div className="flex items-center relative w-full rounded-md border border-border py-2 px-4 max-w-[240px]">
           <div className="pr-7 text-foreground/45 text-sm">{email}</div>
           <button type="button" onClick={copyToClipboard}>
             <span className="sr-only">Copy</span>
@@ -141,21 +146,13 @@ const FeatureDetails: React.FC<FeatureDetailsProps> = ({
           </button>
         </div>
       </div>
-      <div className="md:basis-1/2 mt-8 md:mt-0 -bottom-[8px] relative">
-        <Image
-          src={`${imageSrc}-light.png`}
-          alt="osgoi"
-          width={1296}
-          height={1197}
-          className="block dark:hidden object-contain"
-          priority
-        />
+      <div className="mt-8 md:mt-0 md:basis-1/2">
         <Image
           src={`${imageSrc}.png`}
-          alt="hojs"
+          alt={imageAlt}
           width={1296}
           height={1197}
-          className="hidden dark:block object-contain"
+          className="w-full h-auto"
           priority
         />
       </div>

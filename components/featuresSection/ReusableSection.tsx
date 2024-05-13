@@ -1,6 +1,6 @@
-import React from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { cn } from '@/lib/utils/cn';
+import React from "react";
+import Image, { StaticImageData } from "next/image";
+import { cn } from "@/lib/utils/cn";
 
 interface SectionProps {
   reverse?: boolean;
@@ -20,36 +20,29 @@ const ReusableSection: React.FC<SectionProps> = ({
   featureText,
 }) => {
   return (
-    <section className="border border-border rounded-2xl   bg-accent/30 p-8 md:p-10 md:pb-0 overflow-hidden mb-12 mt-12">
+    <section className="border border-border rounded-2xl bg-accent/30 p-6 md:p-10 md:pb-0 overflow-hidden mb-12 mt-12">
       <div
         className={`flex flex-col ${
-          reverse ? 'md:flex-row-reverse ' : 'md:flex-row md:space-x-[70px] '
-        } `}
+          reverse ? "md:flex-row-reverse" : "md:flex-row md:space-x-[70px]"
+        }`}
       >
-        <div className=" w-[2000px] border rounded-lg ">
+        <div className="w-full md:w-[2000px] border rounded-lg">
           <Image
             src={imageSrc}
             alt={imageAlt}
             width={794}
             height={402}
-            className='rounded-lg'
+            className="rounded-lg w-full h-auto"
             priority
           />
-          {/* <Image
-            src={`${imageSrc.replace('.png', '-dark.png')}`}
-            alt={imageAlt}
-            width={789}
-            height={400}
-            className="hidden dark:block -mb-[1px] object-contain"
-            priority
-          /> */}
         </div>
-              <div className={cn(`mt-6 flex flex-col text-start  md:mb-8`,
-                  {
-                "mr-[70px] ml-[0px]": reverse
-            }
-        )}>
-          <h3 className="font-medium text-xl md:text-2xl mb-4">{title}</h3>
+        <div
+          className={cn(
+            `mt-6 flex flex-col text-start md:mb-8 md:mt-0`,
+            reverse ? "md:ml-0 md:mr-[70px]" : "md:mr-0 md:ml-[70px]"
+          )}
+        >
+          <h3 className="font-medium text-lg md:text-2xl mb-4">{title}</h3>
           <p className="text-foreground/45 mb-4">{description}</p>
           <div className="flex space-x-2 items-center mt-8">
             <CheckIcon />

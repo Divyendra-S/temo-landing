@@ -94,11 +94,11 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({
   setIsMenuOpen,
 }) => (
   <motion.div
-    className={`hidden md:flex justify-between items-center mt-[15px] px-6 py-4 h-[56px] bg-background text-foreground text-sm fixed z-[999] ${
+    className={`hidden md:flex justify-between items-center max-w-[1110px] mt-[15px] px-6 py-4 h-[56px] bg-background text-foreground text-sm fixed z-[999] ${
       isScrolled ? "shadow-effect rounded-2xl border border-border bg-background " : ""
     }`}
-    initial={{ width: "1180px", opacity: 0 }}
-    animate={{ width: isScrolled ? "787px" : "1180px", opacity: 1 }}
+    initial={{ width: "90%", opacity: 0 }}
+    animate={{ width: isScrolled ? "787px" : "90%", opacity: 1 }}
     transition={{ duration: 0.7, ease: "circInOut" }}
   >
     <motion.div

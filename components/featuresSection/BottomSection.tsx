@@ -6,9 +6,9 @@ interface Props {}
 
 const BottomSection: React.FC<Props> = () => {
   return (
-    <div className="border border-border rounded-2xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 md:py-20 mb-32 mt-24 flex items-center flex-col bg-[#121212]">
-      <span className="text-6xl md:text-8xl font-medium text-white">Stress free by midday.</span>
-      <p className="text-[#878787] mt-6">
+    <div className="border border-border rounded-2xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 md:py-20 mb-32 mt-24 flex items-center flex-col bg-accent/30">
+      <span className="text-6xl md:text-8xl font-medium ">Stress free by midday.</span>
+      <p className="text-foreground/45 mt-6">
         Midday provides you with greater insight into your business and
         <br /> automates the boring tasks, allowing you to focus on what you love to do instead.
       </p>

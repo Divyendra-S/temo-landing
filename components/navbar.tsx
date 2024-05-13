@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { ModeToggle } from "./ModeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -102,12 +103,13 @@ const Navbar = () => {
         animate={{ x: isScrolled ? 0 : 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }} // Apply the easing function here
       >
-        <button className="bg-transparent text-text-black px-4 py-2 rounded-lg hover:bg-accent">
+        <ModeToggle/>
+        {/* <button className="bg-transparent text-text-black px-4 py-2 rounded-lg hover:bg-accent">
           Github
-        </button>
+        </button> */}
         {isScrolled && (
           <motion.button
-            className=" bg-accent/85 text-text-black h-8 px-2 rounded-lg mt-[2px] "
+            className=" bg-accent/85 text-text-black h-8 px-2 rounded-lg ml-2 mt-[2px] "
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{

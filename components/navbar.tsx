@@ -109,7 +109,7 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div><Image src={temoLogo} alt="temoLogo" width={100} height={10} /></div>
+      <div><Image src={temoLogo} alt="temoLogo" width={100} height={10} className="dark:hidden" /></div>
       {isScrolled && <div className="h-5 w-px ml-3 bg-border"></div>}
       {/* <motion.span className="text-lg font-bold">
         {companyName.split("").map((letter, index) => (

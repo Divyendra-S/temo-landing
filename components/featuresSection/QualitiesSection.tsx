@@ -23,7 +23,7 @@ const QualitiesSection = () => {
     },
   ];
   return (
-    <section className="text-center mt-24 md:mt-[200px] mb-12 containers ">
+    <section className="text-center mt-24 md:mt-[200px] mb-12 contain sm:max-w-[610px] md:max-w-[740px] lg:max-w-[1000px] xl:max-w-[1250px] 2xl:max-w-[1500px] ">
       <h3 className="text-4xl md:text-8xl font-medium">Save hours.</h3>
       <p className="mt-4 md:mt-8 text-foreground/45 max-w-[600px] mx-auto">
         From automated receipt-to-transaction mapping to conversing with your

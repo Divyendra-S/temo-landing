@@ -15,7 +15,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ features }) => {
   return (
-    <section className="flex flex-col md:flex-row justify-between space-y-12 md:space-y-0 md:space-x-8 overflow-hidden mb-12">
+    <section className="flex flex-col lg:flex-row justify-between space-y-12 lg:space-y-0 lg:space-x-8 overflow-hidden mb-12">
       {features.map(
         ({ status, title, description, imageSrc, imageAlt }, index) => (
           <FeatureCard
@@ -59,13 +59,13 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   imageAlt,
 }) => {
   return (
-    <div className="border border-border basis-full md:basis-1/3 rounded-2xl bg-accent/30 p-6 md:p-10 flex flex-col items-center md:text-center">
+    <div className="border border-border basis-full lg:basis-1/3 rounded-2xl bg-accent/30 p-6 md:p-10 flex flex-col items-start text-start ">
       {status === "coming-soon" && (
         <span className="text-primary border border-primary rounded-full font-semibold px-3 text-xs py-1.5 mb-4">
           Coming soon
         </span>
       )}
-      <h4 className="font-medium text-lg md:text-xl lg:text-2xl mb-4">
+      <h4 className="font-medium text-lg  mb-4">
         {title}
       </h4>
       <p className="text-foreground/45">{description}</p>

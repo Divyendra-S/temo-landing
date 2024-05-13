@@ -1,8 +1,7 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -50,29 +49,37 @@
   }
 }
 
-
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+@layer base {
+  * {
+    @apply border-border;
   }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 
-  .containers {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 8px/* 32px */;
-    padding-left: 8px/* 32px */;
+.containers {
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 8px /* 32px */;
+  padding-left: 8px /* 32px */;
 }
 @media (min-width: 1400px) {
-    .containers {
-        max-width: 1500px;
-    }
+  .containers {
+    max-width: 1500px;
+  }
 }
 
+.contain {
+  width: 95%;
+}
+@media (min-width: 640px) {
+  .contain {
+    width: 95%;
+    max-width: 610px;
+  }
+}
 
 .shadow-effect {
   box-shadow: 0 0 2px rgba(95, 74, 46, 0.075), 0 2px 3px rgba(95, 74, 46, 0.043),

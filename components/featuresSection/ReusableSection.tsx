@@ -20,7 +20,7 @@ const ReusableSection: React.FC<SectionProps> = ({
   featureText,
 }) => {
   return (
-    <section className="border border-border rounded-2xl   dark:bg-accent/30 p-8 md:p-10 md:pb-0 overflow-hidden mb-12 mt-12">
+    <section className="border border-border rounded-2xl   bg-accent/30 p-8 md:p-10 md:pb-0 overflow-hidden mb-12 mt-12">
       <div
         className={`flex flex-col ${
           reverse ? 'md:flex-row-reverse ' : 'md:flex-row md:space-x-[70px] '

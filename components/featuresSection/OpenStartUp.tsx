@@ -39,7 +39,7 @@ const OpenStartup: React.FC = () => {
     <section className="mb-32">
       <div className="mb-12 text-start">
         <h2 className="text-4xl mb-4">Open startup</h2>
-        <p className="text-[#707070]">
+        <p className="text-foreground/45">
           We believe in being as transparent as possible, from{' '}
           <Link
             href="https://git.new/midday"
@@ -61,7 +61,7 @@ const OpenStartup: React.FC = () => {
           and vote on which ones we should prioritize.
         </p>
       </div>
-      <div className="border border-border rounded-2xl bg-white dark:bg-[#121212] p-8 md:p-10">
+      <div className="border border-border rounded-2xl bg-accent/30 p-8 md:p-10">
         <div className="flex flex-col md:flex-row md:space-x-16">
           <AccordionSection items={accordionItems} />
           {/* Repo card content */}

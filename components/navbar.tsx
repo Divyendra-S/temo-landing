@@ -11,6 +11,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
+import temoLogo from '../public/temoLogo.png'
+import Image from "next/image";
 
 interface NavbarProps {}
 
@@ -107,9 +109,9 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div>Temo.AI</div>
+      <div><Image src={temoLogo} alt="temoLogo" width={100} height={10} /></div>
       {isScrolled && <div className="h-5 w-px ml-3 bg-border"></div>}
-      <motion.span className="text-lg font-bold">
+      {/* <motion.span className="text-lg font-bold">
         {companyName.split("").map((letter, index) => (
           <motion.span
             key={index}
@@ -124,7 +126,7 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({
             {letter}
           </motion.span>
         ))}
-      </motion.span>
+      </motion.span> */}
     </motion.div>
     <div className="flex space-x-4 gap-x-3 items-center">
       {options.map((option, index) => (
